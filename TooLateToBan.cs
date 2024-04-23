@@ -48,6 +48,12 @@ namespace TooLateToBan
                     return;
                 }
 
+                if (AdminManager.PlayerHasPermissions(player, ["css/generic"]))
+                {
+                    player.PrintToChat($" {Localizer["tltb.prefix"]} {Localizer["tltb.nopermission"]}");
+                    return;
+                }
+
                 if (PlayerList.Count() == 0)
                 {
                     player.PrintToChat($" {Localizer["tltb.prefix"]} {Localizer["tltb.noplayerstored"]}");

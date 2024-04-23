@@ -3,6 +3,6 @@
   "tltb.onlyingame": "This command can only run in-game",
   "tltb.noplayerstored": "No player stored in list.",
   "tltb.mainmenutitle": "Disconnected Players",
-  "tltb.operationtitle": "Select Operation"
-
+  "tltb.operationtitle": "Select Operation",
+  "tltb.nopermission": "You have no permission to use this command!"
 } 
