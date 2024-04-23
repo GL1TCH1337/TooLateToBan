@@ -1,0 +1,8 @@
+{
+  "tltb.prefix": "{default}[ {lightblue}TLTB {default}]",
+  "tltb.onlyingame": "This command can only run in-game",
+  "tltb.noplayerstored": "No player stored in list.",
+  "tltb.mainmenutitle": "Disconnected Players",
+  "tltb.operationtitle": "Select Operation"
+
+} 
