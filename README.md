@@ -4,7 +4,7 @@ This plugins allows you to ban/silence/mute/gag players who disconnected from se
 
 # Requirements
 [Counter Strike Sharp](https://github.com/roflmuffin/CounterStrikeSharp)
-[Simple Admin](https://github.com/daffyyyy/CS2-SimpleAdmin/)
+
 
 # Installation
 - Download the latest release from [https://github.com/gl1tch1337/TooLateToBan/releases](https://github.com/gl1tch1337/TooLateToBan/tags)
@@ -24,6 +24,10 @@ This plugins allows you to ban/silence/mute/gag players who disconnected from se
     "Admin disrespect",
     "Other"
   ],
+  "BanCommand": "css_addban", // Change the command if you're not using SimpleAdmin
+  "MuteCommand": "css_addmute", // Change the command if you're not using SimpleAdmin
+  "GagCommand": "css_addgag",// Change the command if you're not using SimpleAdmin
+  "SilenceCommand": "css_addsilence",// Change the command if you're not using SimpleAdmin
   "ConfigVersion": 1
 }
 ```

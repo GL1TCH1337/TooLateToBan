@@ -17,7 +17,7 @@ namespace TooLateToBan
     {
         public override string ModuleName => "Too Late To Ban";
 
-        public override string ModuleVersion => "0.0.1";
+        public override string ModuleVersion => "0.0.2";
 
         public override string ModuleAuthor => "GL1TCH1337";
 
@@ -48,7 +48,7 @@ namespace TooLateToBan
                     return;
                 }
 
-                if (AdminManager.PlayerHasPermissions(player, ["css/generic"]))
+                if (!AdminManager.PlayerHasPermissions(player, ["css/generic"]))
                 {
                     player.PrintToChat($" {Localizer["tltb.prefix"]} {Localizer["tltb.nopermission"]}");
                     return;
@@ -189,20 +189,16 @@ namespace TooLateToBan
                     switch (operation)
                     {
                         case "ban":
-                            admin.PrintToChat("css_addban");
-                            admin.ExecuteClientCommandFromServer($"css_addban {playerSteamId} {duration} {option}");
+                            admin.ExecuteClientCommandFromServer($"{Config.BanCommand} {playerSteamId} {duration} {option}");
                             break;
                         case "gag":
-                            admin.PrintToChat("css_addgag");
-                            admin.ExecuteClientCommandFromServer($"css_addgag {playerSteamId} {duration} {option}");
+                            admin.ExecuteClientCommandFromServer($"{Config.GagCommand} {playerSteamId} {duration} {option}");
                             break;
                         case "mute":
-                            admin.PrintToChat("css_addmute");
-                            admin.ExecuteClientCommandFromServer($"css_addmute {playerSteamId} {duration} {option}");
+                            admin.ExecuteClientCommandFromServer($"{Config.MuteCommand} {playerSteamId} {duration} {option}");
                             break;
                         case "silence":
-                            admin.PrintToChat("css_addsilence");
-                            admin.ExecuteClientCommandFromServer($"css_addsilence {playerSteamId} {duration} {option}");
+                            admin.ExecuteClientCommandFromServer($"{Config.SilenceCommand} {playerSteamId} {duration} {option}");
                             break;
                     }
                 });

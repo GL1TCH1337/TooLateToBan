@@ -20,5 +20,12 @@ namespace TooLateToBan
             "Admin disrespect",
             "Other"
         ];
+
+        [JsonPropertyName("BanCommand")] public string BanCommand { get; set; } = "css_addban";
+        [JsonPropertyName("MuteCommand")] public string MuteCommand { get; set; } = "css_addmute";
+        [JsonPropertyName("GagCommand")] public string GagCommand { get; set; } = "css_addgag";
+        [JsonPropertyName("SilenceCommand")] public string SilenceCommand { get; set; } = "css_addsilence";
+
+
     }
 }
